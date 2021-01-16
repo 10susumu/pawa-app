@@ -13,6 +13,7 @@
 ActiveRecord::Schema.define(version: 2021_01_08_163322) do
 
   create_table "bushos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.float "bu_id", null: false
     t.string "name", null: false
     t.string "senjutsu", null: false
     t.float "myrate", null: false

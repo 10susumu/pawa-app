@@ -9,8 +9,8 @@ window.onload = function() {
     const kishu = parseFloat(document.getElementById('busho_kishu').value)
     
     bushoJson = $('#enemy').data('json');
-    enemyId = $('#enemy_id').val()-1;
-    allyId = $('#ally_id').val()-1;
+    enemyId = $('#enemy_id').val() - 0;
+    allyId = $('#ally_id').val() - 0;
     console.log(bushoJson[enemyId])
     
     
