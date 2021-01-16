@@ -9,9 +9,7 @@
   <div id="enemy" data-json = <%= @busho_json %> >
   <%= f.label :name, '相手武将' %>
   <%= f.collection_select(:enemy_id, @busho, :id, :name, {}, {class:"", id:"enemy_id"}) %>
-  <span id="enemy_sen"><%= @senjutsu %></span>
-  <span><% @enemy_myrate %></span>
-  <span><% @enemy_opprate %></span>
+  <span id="enemy_sen"></span>
   </div>
 
   <div id="enemy_power">
