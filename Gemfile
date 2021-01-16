@@ -55,7 +55,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'active_hash'
 gem 'pry-rails'
-gem 'jquery-rails'
+gem 'jquery-rails' #yarn add jquery
+
 
 group :production do
   gem 'rails_12factor'
