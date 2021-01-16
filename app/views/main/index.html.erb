@@ -1,0 +1,110 @@
+<h1>
+  兵力計算
+</h1>
+<%= form_with model: @busho, url: main_index_path, local: true do |f| %>
+  <%#
+  <input name="busho_json" type="hidden" value=<%= @busho_json class='busho_json'>
+  %>
+
+  <div id="enemy" data-json = <%= @busho_json %> >
+  <%= f.label :name, '相手武将' %>
+  <%= f.collection_select(:enemy_id, @busho, :id, :name, {}, {class:"", id:"enemy_id"}) %>
+  <span id="enemy_sen"><%= @senjutsu %></span>
+  <span><% @enemy_myrate %></span>
+  <span><% @enemy_opprate %></span>
+  </div>
+
+  <div id="enemy_power">
+  <%= f.label :name, '相手兵力' %>
+    <%= f.number_field :float, class:"min", id:"min", placeholder:"下限" %>
+    <%= f.number_field :float, class:"max", id:"max", placeholder:"上限" %>
+  </div>
+
+  <div id="kishu">
+  <%= f.label :name, '奇襲効果' %>
+  <%= f.select :kishu, [["-0%", 0], ["-30%", 0.3], ["-60%", 0.6], ["-100%", 1]], class:"", id:"busho_kishu" %>
+  </div>
+
+  <div id="ally">
+  <%= f.label :name, '味方武将' %>
+  <%= f.collection_select(:busho_id, Busho.all, :id, :name, {}, {class:"", id:"ally_id"}) %>
+  <span id="ally_sen"><%= @senjutsu %></span>
+  </div>
+
+  <div id="">
+  <%= f.submit "計算" ,class:"btn", id:"btn" %>
+  </div>
+<% end %>
+
+<table border="2">
+<thead>
+  <tr>
+    <th>勝てる時！</th>
+    <th>敵将アリ</th>
+    <th>敵将ナシ</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <th>味方アリ</th>
+    <td>
+      <table>
+        <tr>
+          <th>有利</th>
+          <th>同値</th>
+          <th>不利</th>
+        </tr>
+        <tr>
+          <td><span id="tab01"></span></td>
+          <td><span id="tab02"></span></td>
+          <td><span id="tab03"></span></td>
+        </tr>
+      </table>
+    </td>
+    <td>
+      <table>
+        <tr>
+          <th>有利</th>
+          <th>同値</th>
+          <th>不利</th>
+        </tr>
+        <tr>
+          <td><span id="tab04"></span></td>
+          <td><span id="tab05"></span></td>
+          <td><span id="tab06"></span></td>
+        </tr>
+    </table>
+    </td>
+  </tr>
+  <tr>
+    <th>味方ナシ</th>
+        <td>
+      <table>
+        <tr>
+          <th>有利</th>
+          <th>同値</th>
+          <th>不利</th>
+        </tr>
+        <tr>
+          <td><span id="tab07"></span></td>
+          <td><span id="tab08"></span></td>
+          <td><span id="tab09"></span></td>
+        </tr>
+    </table>
+    </td>    <td>
+      <table>
+        <tr>
+          <th>有利</th>
+          <th>同値</th>
+          <th>不利</th>
+        </tr>
+        <tr>
+          <td><span id="tab10"></span></td>
+          <td><span id="tab11"></span></td>
+          <td><span id="tab12"></span></td>
+        </tr>
+    </table>
+    </td>
+  </tr>
+</tbody>
+</table>
