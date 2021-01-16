@@ -12,7 +12,7 @@ Busho.create(name:'忍キャラ', senjutsu:'手裏剣の舞', myrate:'1.2', oppn
 Busho.create(name:'石田', senjutsu:'兵糧確保', myrate:'1.2', oppnentrate:'1')
 Busho.create(name:'片倉', senjutsu:'鬼の小十郎', myrate:'1.35', oppnentrate:'1')
 Busho.create(name:'吉川', senjutsu:'不敗の猛将', myrate:'1.3', oppnentrate:'1')
-Busho.create(name:'本田', senjutsu:'天下無双', myrate:'1.45', oppnentrate:'1')
+Busho.create(name:'本多', senjutsu:'天下無双', myrate:'1.45', oppnentrate:'1')
 Busho.create(name:'直江', senjutsu:'直江状', myrate:'1', oppnentrate:'0.8')
 Busho.create(name:'島津義久', senjutsu:'釣り野伏せ', myrate:'1', oppnentrate:'0.7')
 Busho.create(name:'山本', senjutsu:'キツツキ戦法', myrate:'1', oppnentrate:'0.4')
