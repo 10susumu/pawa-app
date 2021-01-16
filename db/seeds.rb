@@ -1,5 +1,5 @@
-Busho.create(name:'ゼンザイ', senjutsu:'月下の舞', myrate:'1.3', oppnentrate:'0.85')
-Busho.create(name:'千代姫', senjutsu:'槍騎兵', myrate:'1.6', oppnentrate:'1')
+Busho.create(id:"1", name:'ゼンザイ', senjutsu:'月下の舞', myrate:'1.3', oppnentrate:'0.85')
+Busho.create(id:"2", name:'千代姫', senjutsu:'槍騎兵', myrate:'1.6', oppnentrate:'1')
 Busho.create(name:'郡司', senjutsu:'魚鱗の陣', myrate:'1.6', oppnentrate:'1')
 Busho.create(name:'浮見', senjutsu:'鶴翼の陣', myrate:'1.5', oppnentrate:'1')
 Busho.create(name:'織田', senjutsu:'三段撃ち', myrate:'1.6', oppnentrate:'0.85')
