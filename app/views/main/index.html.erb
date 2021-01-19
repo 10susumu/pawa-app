@@ -6,30 +6,30 @@
 
 <%= form_with model: @busho, url: main_index_path, local: true do |f| %>
 
-  <div id="enemy" class="form-group row col-sm-6" data-json = <%= @busho_json %> >
-    <%= f.label :name, '相手武将', {class:"col-3 col-form-label"} %>
+  <div id="enemy" class="form-group row col-sm-6 py-0 my-0" data-json = <%= @busho_json %> >
+    <%= f.label :name, '相手武将', {class:"col-3 col-form-label text-nowrap"} %>
     <div class="col-6">
       <%= f.collection_select(:enemy_id, @busho, :bu_id, :name, {include_blank:'選択してください'}, {class:"form-control form-control-sm", id:"enemy_id"}) %>
     </div>
-    <span class="col-3" id="enemy_sen"><%= @senjutsu %></span>
+    <span class="col-3 text-nowrap" id="enemy_sen"><%= @senjutsu %></span>
   </div>
-  <div id="ally" class="form-group row col-sm-6">
-    <%= f.label :name, '味方武将', {class:"col-3 col-form-label"} %>
+  <div id="ally" class="form-group row col-sm-6 py-0 my-0">
+    <%= f.label :name, '味方武将', {class:"col-3 col-form-label text-nowrap"} %>
     <div class="col-6">
       <%= f.collection_select(:busho_id, Busho.all, :bu_id, :name, {}, {class:"form-control form-control-sm", id:"ally_id"}) %>
     </div>
-    <span class="col-3" id="ally_sen"><%= @senjutsu %></span>
+    <span class="col-3 text-nowrap" id="ally_sen"><%= @senjutsu %></span>
   </div>
 
-  <div class="form-group row col-sm-6" id="enemy_power">
-      <%= f.label :name, '相手兵力', {class:"col-3 col-form-label"} %>
+  <div class="form-group row col-sm-6 py-0 my-0" id="enemy_power">
+      <%= f.label :name, '相手兵力', {class:"col-3 col-form-label text-nowrap"} %>
     <div class="col">
       <%= f.number_field :float, class:"min form-control form-control-sm block", id:"min", placeholder:"下限" %>
       <%= f.number_field :float, class:"max form-control form-control-sm block", id:"max", placeholder:"上限" %>
     </div>
   </div>
-  <div class="form-group row col-sm-6" id="kishu">
-      <%= f.label :name, '奇襲効果', {class:"col-3 col-form-label"} %>
+  <div class="form-group row col-sm-6 py-0 my-0" id="kishu">
+      <%= f.label :name, '奇襲効果', {class:"col-3 col-form-label text-nowrap"} %>
     <div class="col">
       <%= f.select :kishu, [["-0%", 0], ["-30%", 0.3], ["-60%", 0.6], ["-100%", 1]], {}, {class:"form-control form-control-sm", id:"busho_kishu"} %>
     </div>
@@ -37,11 +37,11 @@
 
 
   <div id="">
-  <%= f.submit "計算" ,class:"col-sm-6 btn btn-sm btn-outline-primary  btn-block ", id:"btn" %>
+  <%= f.submit "計算" ,class:"col-sm-6 btn btn-sm btn-outline-primary  btn-block   my-0", id:"btn" %>
   </div>
 <% end %>
 
-<table class="col-sm-6 mt-2 text-center" border="2">
+<table class="col-sm-6 mt-2 text-center text-nowrap" border="2">
 <thead>
   <tr>
     <th>勝てる時！</th>
@@ -53,30 +53,30 @@
   <tr>
     <th>味方アリ</th>
     <td>
-      <table class="text-center">
+      <table class="col text-center text-nowrap">
         <tr>
           <th>有利</th>
           <th>同値</th>
           <th>不利</th>
         </tr>
         <tr>
-          <td><span id="tab01"></span></td>
-          <td><span id="tab02"></span></td>
-          <td><span id="tab03"></span></td>
+          <td><span id="tab0">-</span></td>
+          <td><span id="tab1">-</span></td>
+          <td><span id="tab2">-</span></td>
         </tr>
       </table>
     </td>
     <td>
-      <table>
+      <table class="col text-center text-nowrap">
         <tr>
           <th>有利</th>
           <th>同値</th>
           <th>不利</th>
         </tr>
         <tr>
-          <td><span id="tab04"></span></td>
-          <td><span id="tab05"></span></td>
-          <td><span id="tab06"></span></td>
+          <td><span id="tab3">-</span></td>
+          <td><span id="tab4">-</span></td>
+          <td><span id="tab5">-</span></td>
         </tr>
     </table>
     </td>
@@ -84,29 +84,29 @@
   <tr>
     <th>味方ナシ</th>
         <td>
-      <table>
+      <table class="col text-center text-nowrap">
         <tr>
           <th>有利</th>
           <th>同値</th>
           <th>不利</th>
         </tr>
         <tr>
-          <td><span id="tab07"></span></td>
-          <td><span id="tab08"></span></td>
-          <td><span id="tab09"></span></td>
+          <td><span id="tab6">-</span></td>
+          <td><span id="tab7">-</span></td>
+          <td><span id="tab8">-</span></td>
         </tr>
     </table>
     </td>    <td>
-      <table>
+      <table class="col text-center text-nowrap">
         <tr>
           <th>有利</th>
           <th>同値</th>
           <th>不利</th>
         </tr>
         <tr>
-          <td><span id="tab10"></span></td>
-          <td><span id="tab11"></span></td>
-          <td><span id="tab12"></span></td>
+          <td><span id="tab9">-</span></td>
+          <td><span id="tab10">-</span></td>
+          <td><span id="tab11">-</span></td>
         </tr>
     </table>
     </td>
