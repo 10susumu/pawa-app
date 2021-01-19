@@ -1,40 +1,46 @@
-<h1>
-  兵力計算
-</h1>
+<div class="container">
+<div class="row">
+</div>
+  <h1 class="text-center">兵力計算</h1>
+
+
 <%= form_with model: @busho, url: main_index_path, local: true do |f| %>
-  <%#
-  <input name="busho_json" type="hidden" value=<%= @busho_json class='busho_json'>
-  %>
 
-  <div id="enemy" data-json = <%= @busho_json %> >
-  <%= f.label :name, '相手武将' %>
-  <%= f.collection_select(:enemy_id, @busho, :bu_id, :name, {}, {class:"", id:"enemy_id"}) %>
-  <span id="enemy_sen"></span>
+  <div class="form-row">
+    <div id="enemy" class="col" data-json = <%= @busho_json %> >
+      <%= f.label :name, '相手武将', {class:""} %>
+      <%= f.collection_select(:enemy_id, @busho, :bu_id, :name, {}, {class:"form-control block", id:"enemy_id"}) %>
+      <span id="enemy_sen"><%= @senjutsu %></span>
+    </div>
+    <div id="ally" class="col">
+      <%= f.label :name, '味方武将' %>
+      <%= f.collection_select(:busho_id, Busho.all, :bu_id, :name, {}, {class:"form-control block", id:"ally_id"}) %>
+      <span id="ally_sen"><%= @senjutsu %></span>
+    </div>
   </div>
 
-  <div id="enemy_power">
-  <%= f.label :name, '相手兵力' %>
-    <%= f.number_field :float, class:"min", id:"min", placeholder:"下限" %>
-    <%= f.number_field :float, class:"max", id:"max", placeholder:"上限" %>
+  <div id="enemy_power" class="mt-3 form-row">
+    <div class="col">
+      <%= f.label :name, '相手兵力  下限' %>
+      <%= f.number_field :float, class:"min form-control ", id:"min", placeholder:"下限" %>
+    </div>
+    <div class="col">
+      <%= f.label :name, '上限' %>
+      <%= f.number_field :float, class:"max form-control", id:"max", placeholder:"上限" %>
+    </div>
+    <div id="kishu" class="col">
+      <%= f.label :name, '奇襲効果' %>
+      <%= f.select :kishu, [["-0%", 0], ["-30%", 0.3], ["-60%", 0.6], ["-100%", 1]], {}, {class:"form-control", id:"busho_kishu"} %>
+    </div>
   </div>
 
-  <div id="kishu">
-  <%= f.label :name, '奇襲効果' %>
-  <%= f.select :kishu, [["-0%", 0], ["-30%", 0.3], ["-60%", 0.6], ["-100%", 1]], class:"", id:"busho_kishu" %>
-  </div>
-
-  <div id="ally">
-  <%= f.label :name, '味方武将' %>
-  <%= f.collection_select(:busho_id, Busho.all, :bu_id, :name, {}, {class:"", id:"ally_id"}) %>
-  <span id="ally_sen"><%= @senjutsu %></span>
-  </div>
 
   <div id="">
-  <%= f.submit "計算" ,class:"btn", id:"btn" %>
+  <%= f.submit "計算" ,class:"btn btn-outline-primary  btn-block mt-3", id:"btn" %>
   </div>
 <% end %>
 
-<table border="2">
+<table class="col mt-3" border="2">
 <thead>
   <tr>
     <th>勝てる時！</th>
@@ -106,3 +112,5 @@
   </tr>
 </tbody>
 </table>
+
+</div>
