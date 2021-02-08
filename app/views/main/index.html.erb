@@ -24,6 +24,7 @@
   <div class="form-group row col-sm-6 py-0 my-0" id="enemy_power">
       <%= f.label :name, '相手兵力', {class:"col-3 col-form-label text-nowrap"} %>
     <div class="col">
+      <%= f.submit "計算" ,class:"col-sm-6 btn btn-sm btn-outline-primary  btn-block   my-0", id:"btn" %>
       <%= f.number_field :float, class:"min form-control form-control-sm block", id:"min", placeholder:"下限" %>
       <%= f.number_field :float, class:"max form-control form-control-sm block", id:"max", placeholder:"上限" %>
     </div>
