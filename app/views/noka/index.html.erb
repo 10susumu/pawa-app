@@ -1,0 +1,190 @@
+<div class="main py-5">
+  <div class="container">
+<h1 id= "top">アストロノーカ</h1>
+  <%= link_to "戻る", root_path %><br>
+  <%= link_to 'メンデル周期表', noka_index_path(anchor: 'menderu') %> <br>
+  <%= link_to '遺伝子組み換え', noka_index_path(anchor: 'idenshi') %> <br>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="">
+        <p>穴ホウレン草<%= @yasai/100000000 %>個 シマイモ<%= @yasai%100000000/10000 %>個 星カブ<%= @yasai%10000 %>個</p>
+
+        <%= form_with model: @noka, url:noka_index_path, class:"form-signin", id:"form-signin", local: true  do |f| %>
+        </div>
+
+        <%= f.text_field :yasai, class:"form-control", id:"", placeholder:"やさい", required:true, autofocus:true %>
+        <%= f.submit "更新する", class:"btn btn-lg btn-primary btn-block" %>
+        <% end %>
+      </div>
+    </div>
+    <div>
+    <p>1 松茸ー 2昆布1ー 2スイカ1</p>
+
+    <p>2 昆布1ー 3ホタル1ー 3わかめ1</p>
+    <p>2 スイカ1ー 3ホタル1ー 3トゲ1</p>
+
+    <p>3 ホタル2ー 4カリフラ2ー 4マメ2</p>
+    <p>3 わかめ1ー 4かぼちゃ1ー 4いちご1</p>
+    <p>3 とげ1ー 4マメ1ー 4ぴち1</p>
+
+    <p>4 まめ3ー 4かぼちゃ3ー 5ろうそく3</p>
+    <p>4 いちご1ー 5ろうそく1ー 4ぴち1</p>
+    <p>4 ぴち1+1ー 4かりふら2ー 4かぼちゃ2</p>
+    <p>4 かぼちゃ1+5ー 4かりふら6ー 5ろうそく6</p>
+    <p>4 カリフラ2+8ー 0かぶ10ー 5ナス10</p>
+
+    <p>5 なす10ー 0ほうれん10ー 0かぶ10+10</p>
+    <p>5 ろうそく10ー 6きゃべつ10ー 0かぶ10+10+10</p>
+
+    <p>6 きゃべつ10ー 7きゅうり10ー 0いも10</p>
+
+    <p>7 きゅうり10ー 0ほうれん9+10ー 0いも10+10</p>
+
+    <p>0 ほんれん20 いも20 かぶ30</p>
+
+
+    </div>
+    <div id= "menderu">メンデル周期表</div>
+    <table id="content_block_2"><tbody><tr>
+    <th>メンデル</th><th>A科野菜</th><th>B科野菜</th><th>C科野菜</th>
+    </tr><tr>
+    <th>2</th><td style="background-color:#f3f3f3;text-align:center;">-</td>
+    <td><b>シマイモ</b>・重さ 3日<br />なし</td>
+    <td style="background-color:#f3f3f3;text-align:center;">-</td>
+    </tr><tr>
+    <th>4</th><td style="background-color:#f3f3f3;text-align:center;">-</td>
+    <td><b>星カブ</b>・大きさ<br />なし</td>
+    <td style="background-color:#f3f3f3;text-align:center;">-</td>
+    </tr><tr>
+    <th>5</th><td style="background-color:#f3f3f3;text-align:center;">-</td>
+    <td style="background-color:#f3f3f3;text-align:center;">-</td>
+    <td><b>トマトニアン</b>・栄養<br />なし</td>
+    </tr><tr>
+    <th>6</th><td style="background-color:#f3f3f3;text-align:center;">-</td>
+    <td><b>腰かけレンコン</b>・模様<br />シマイモ+星カブ</td>
+    <td style="background-color:#f3f3f3;text-align:center;">-</td>
+    </tr><tr>
+    <th>7</th><td><b>穴ホウレン草</b>・模様<br />シマイモ+トマトニアン</td>
+    <td style="background-color:#f3f3f3;text-align:center;">-</td>
+    <td style="background-color:#f3f3f3;text-align:center;">-</td>
+    </tr><tr>
+    <th>8</th><td style="background-color:#f3f3f3;text-align:center;">-</td>
+    <td><b>コスモニンジン</b>・栄養<br />シマイモ+腰かけレンコン</td>
+    <td style="background-color:#f3f3f3;text-align:center;">-</td>
+    </tr><tr>
+    <th>9</th><td><b>ニラクラウン</b>・栄養<br />星カブ+トマトニアン</td>
+    <td style="background-color:#f3f3f3;text-align:center;">-</td>
+    <td><b>電灯キューリ</b>・食感<br />穴ホウレン草+シマイモ</td>
+    </tr><tr>
+    <th>10</th><td style="background-color:#f3f3f3;text-align:center;">-</td>
+    <td><b>タマネギボム</b>・重さ<br />星カブ+腰かけレンコン<br />シマイモ+コスモニンジン</td>
+    <td style="background-color:#f3f3f3;text-align:center;">-</td>
+    </tr><tr>
+    <th>11</th><td><b>透明キャベツ</b>・糖度<br />腰かけレンコン+トマトニアン<br />シマイモ+電灯キューリ</td>
+    <td style="background-color:#f3f3f3;text-align:center;">-</td>
+    <td><b>土星ナス</b>・栄養<br />穴ホウレン草+星カブ<br />ニラクラウン+シマイモ</td>
+    </tr><tr>
+    <th>12</th><td style="background-color:#f3f3f3;text-align:center;">-</td>
+    <td><b>イモ球</b>・大きさ<br />星カブ+コスモニンジン<br />シマイモ+タマネギボム<br />穴ホウレン草+トマトニアン</td>
+    <td style="background-color:#f3f3f3;text-align:center;">-</td>
+    </tr><tr>
+    <th>13</th><td><b>ウキウキパセリ</b>・模様<br />シマイモ+土星ナス<br />コスモニンジン+トマトニアン<br />星カブ+電灯キューリ</td>
+    <td style="background-color:#f3f3f3;text-align:center;">-</td>
+    <td><b>ドームメロン</b>・糖度<br />透明キャベツ+シマイモ<br />ニラクラウン+星カブ<br />穴ホウレン草+腰かけレンコン</td>
+    </tr><tr>
+    <th>14</th><td style="background-color:#f3f3f3;text-align:center;">-</td>
+    <td><b>ゴボウ玉</b>・大きさ<br />シマイモ+イモ球<br />腰かけレンコン+コスモニンジン<br />星カブ+タマネギボム<br />ニラクラウン+トマトニアン</td>
+    <td><b>ひよこレモン</b>・匂い<br />トマトニアン+電灯キューリ</td>
+    </tr><tr>
+    <th>15</th><td><b>カリフラボール</b>・重さ<br />タマネギボム+トマトニアン<br />腰かけレンコン+電灯キューリ<br />星カブ+土星ナス<br />シマイモ+ドームメロン</td>
+    <td style="background-color:#f3f3f3;text-align:center;">-</td>
+    <td><b>ロウソクコーン</b>・食感<br />ウキウキパセリ+シマイモ<br />透明キャベツ+星カブ<br />ニラクラウン+腰かけレンコン<br />穴ホウレン草+コスモニンジン</td>
+    </tr><tr>
+    <th>30</th><td style="background-color:#f3f3f3;text-align:center;">-</td>
+    <td><b>火星カボチャ</b>・模様<br />カリフラボール+ロウソクコーン</td>
+    <td style="background-color:#f3f3f3;text-align:center;">-</td>
+    </tr><tr>
+    <th>45</th><td><b>宇宙マメ</b>・食感<br />火星カボチャ+ロウソクコーン</td>
+    <td style="background-color:#f3f3f3;text-align:center;">-</td>
+    <td><b>砲丸ピーチ</b>・匂い<br />カリフラボール+火星カボチャ</td>
+    </tr><tr>
+    <th>60</th><td><b>ホタル唐辛子</b>・糖度<br />カリフラボール+宇宙マメ</td>
+    <td style="background-color:#f3f3f3;text-align:center;">-</td>
+    <td><b>イチゴブドウ</b>・糖度<br />ロウソクコーン+砲丸ピーチ</td>
+    </tr><tr>
+    <th>90</th><td><b>真空ワカメ</b>・形状<br />火星カボチャ+イチゴブドウ</td>
+    <td><b>トゲガーリック</b>・匂い<br />宇宙マメ+砲丸ピーチ</td>
+    <td><b>光速パイン</b>・大きさ/音色<br />火星カボチャ+ホタル唐辛子</td>
+    </tr><tr>
+    <th>120</th><td style="background-color:#f3f3f3;text-align:center;">-</td>
+    <td><b>カブトタケノコ</b>・重さ/形状<br />火星カボチャ+トゲガーリック<br />ホタル唐辛子+イチゴブドウ</td>
+    <td style="background-color:#f3f3f3;text-align:center;">-</td>
+    </tr><tr>
+    <th>150</th><td><b>月面コンブ</b>・風味<br />ホタル唐辛子+真空ワカメ<br />トゲガーリック+イチゴブドウ</td>
+    <td style="background-color:#f3f3f3;text-align:center;">-</td>
+    <td><b>スイカタワー</b>・糖度/音色<br />ホタル唐辛子+トゲガーリック<br />イチゴブドウ+光速パイン</td>
+    </tr><tr>
+    <th>300</th><td style="background-color:#f3f3f3;text-align:center;">-</td>
+    <td><b>冥王マツタケ</b>・模様/食感<br />月面コンブ+スイカタワー</td>
+    <td style="background-color:#f3f3f3;text-align:center;">-</td>
+    </tr><tr>
+    <th>450</th><td><b>チンゲンツリー</b>・形状<br />冥王マツタケ+スイカタワー</td>
+    <td style="background-color:#f3f3f3;text-align:center;">-</td>
+    <td><b>銀河ドリアン</b>・栄養/匂い<br />月面コンブ+冥王マツタケ</td>
+    </tr><tr>
+    <th>600</th><td><b>妖精ピーマン</b>・音色<br />月面コンブ+チンゲンツリー</td>
+    <td><b>貴婦人</b>・形状/風味<br />月面コンブ+銀河ドリアン<br />チンゲンツリー+スイカタワー</td>
+    <td style="background-color:#f3f3f3;text-align:center;">-</td>
+    </tr><tr>
+    <th>1050</th><td><b>水晶ハーブ</b>・匂い/風味<br />妖精ピーマン+チンゲンツリー<br />貴婦人+銀河ドリアン</td>
+    <td style="background-color:#f3f3f3;text-align:center;">-</td>
+    <td style="background-color:#f3f3f3;text-align:center;">-</td>
+    </tr><tr>
+    <th>1650</th><td style="background-color:#f3f3f3;text-align:center;">-</td>
+    <td style="background-color:#f3f3f3;text-align:center;">-</td>
+    <td><b>アストロキング</b>・音色/風味<br />水晶ハーブ+貴婦人</td>
+    </tr></tbody></table>
+
+    <br>
+
+    <table id= "idenshi">
+    <tbody>
+    <tr>
+    <th>20</th><th> 8</th><th> 3</th><th>15</th><th>30</th><th> 5</th><th>12</th><th> 7</th><th>属性値</th><th>レベル</th>
+    </tr>
+    <tr class="idenshi">
+    <td id= "ide1">●</td><td id="ide2">●</td><td id="ide3">●</td><td id="ide4">●</td><td id="ide5">●</td>
+    <td id="ide6">●</td><td id="ide7">●</td><td id="ide8">●</td><td><div id = "zokusei">100</div></td><td id="level">4MAX</td>
+    </tr>
+    <tr class="zougen">
+    <td id= "zou1">不</td><td id="zou2">不</td><td id="zou3">不</td><td id="zou4">不</td><td id="zou5">不</td>
+    <td id="zou6">不</td><td id="zou7">不</td><td id="zou8">不</td>
+    </tr>
+    </tbody></table>
+    
+    <br>
+
+    <table id= "kakuritu">
+    <tbody>
+    <tr>
+    <th id="jou" colspan="2">上昇</th><th id="fuhe" colspan="2">不変</th><th id="kako" colspan="2">下降</th>
+    </tr>
+    <tr class="">
+    <td id="joushou" colspan="2"> <b>0</b></td><td id = "fuhen" colspan="2"> <b>0</b></td><td id = "kakou" colspan="2"> <b>0</b></td>
+    </tr>
+    <tr class="">
+    <td id="jouplus"> <b>0</b></td><td id = "jouminus"> <b>0</b></td><td id = "fuheplus"> <b>0</b></td>
+    <td id="fuheminus"> <b>0</b></td><td id = "kakoplus"> <b>0</b></td><td id = "kakominus"> <b>0</b></td>
+    </tr
+    ><tr>
+    <th>増え</th><th>減る</th><th>増え</th><th>減る</th><th>増え</th><th>減る</th>
+    </tr>
+    </tbody></table>
+
+  <%= link_to 'トップ', noka_index_path(anchor: 'top') %>
+  </div>
+  <div>
+<p id="saikabu">hoge最下部</p>
+</div>
+</div>

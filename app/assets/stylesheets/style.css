@@ -1,3 +1,33 @@
 .selector-for-some-widget {
   box-sizing: content-box;
 }
+table, td, th { 
+  border: 2px #808080 solid; 
+  text-align: center;
+}
+td{
+  /* width: 5vw; */
+}
+#zokusei, #level { 
+  color: #000000;
+}
+.blank { 
+  color: #808080;
+}
+.idenshi {
+  color: greenyellow;
+}
+
+td[id^="ide"] { /* id名に「""」を含むtd要素 */
+
+  /* color: greenyellow; */
+  text-shadow    : 
+  2px  2px 1px #000000,
+ -2px  2px 1px #000000,
+  2px -2px 1px #000000,
+ -2px -2px 1px #000000,
+  2px  0px 1px #000000,
+  0px  2px 1px #000000,
+ -2px  0px 1px #000000,
+  0px -2px 1px #000000;   
+}
