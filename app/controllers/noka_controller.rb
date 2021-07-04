@@ -88,8 +88,6 @@ class NokaController < ApplicationController
       @yasai = 0
     end
     
-    # @yasai = @sima + @kabu
-    # render plain: params.inspect
     render :index
   end
   def yasai_params

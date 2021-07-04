@@ -1,3 +1,5 @@
+<%= javascript_pack_tag "noka/application" %>
+
 <div class="main py-5">
   <div class="container">
 <h1 id= "top">アストロノーカ</h1>
@@ -154,8 +156,8 @@
     <th>20</th><th> 8</th><th> 3</th><th>15</th><th>30</th><th> 5</th><th>12</th><th> 7</th><th>属性値</th><th>レベル</th>
     </tr>
     <tr class="idenshi">
-    <td id= "ide1">●</td><td id="ide2">●</td><td id="ide3">●</td><td id="ide4">●</td><td id="ide5">●</td>
-    <td id="ide6">●</td><td id="ide7">●</td><td id="ide8">●</td><td><div id = "zokusei">100</div></td><td id="level">4MAX</td>
+    <td id= "ide1" class="blank">●</td><td id="ide2" class="blank">●</td><td id="ide3" class="blank">●</td><td id="ide4" class="blank">●</td><td id="ide5" class="blank">●</td>
+    <td id="ide6" class="blank">●</td><td id="ide7" class="blank">●</td><td id="ide8" class="blank">●</td><td><div id = "zokusei">0</div></td><td id="level">0</td>
     </tr>
     <tr class="zougen">
     <td id= "zou1">不</td><td id="zou2">不</td><td id="zou3">不</td><td id="zou4">不</td><td id="zou5">不</td>
@@ -168,10 +170,10 @@
     <table id= "kakuritu">
     <tbody>
     <tr>
-    <th id="jou" colspan="2">上昇</th><th id="fuhe" colspan="2">不変</th><th id="kako" colspan="2">下降</th>
+    <th id="" colspan="2">上昇</th><th id="" colspan="2">不変</th><th id="" colspan="2">下降</th>
     </tr>
     <tr class="">
-    <td id="joushou" colspan="2"> <b>0</b></td><td id = "fuhen" colspan="2"> <b>0</b></td><td id = "kakou" colspan="2"> <b>0</b></td>
+    <td id="jou" colspan="2"> <b>0</b></td><td id = "fuhe" colspan="2"> <b>0</b></td><td id = "kako" colspan="2"> <b>0</b></td>
     </tr>
     <tr class="">
     <td id="jouplus"> <b>0</b></td><td id = "jouminus"> <b>0</b></td><td id = "fuheplus"> <b>0</b></td>
@@ -185,6 +187,5 @@
   <%= link_to 'トップ', noka_index_path(anchor: 'top') %>
   </div>
   <div>
-<p id="saikabu">hoge最下部</p>
 </div>
 </div>

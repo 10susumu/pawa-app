@@ -1,10 +1,13 @@
+<%= javascript_pack_tag "pawa/application" %>
+
+
 <div class="container">
 <div class="row">
 </div>
   <h1 class="col-sm-6 text-center">兵力計算</h1>
 
 
-<%= form_with model: @busho, url: main_index_path, local: true do |f| %>
+<%= form_with model: @busho, url: pawa_index_path, local: true do |f| %>
 
   <div id="enemy" class="form-group row col-sm-6 py-0 my-0" data-json = <%= @busho_json %> >
     <%= f.label :name, '相手武将', {class:"col-3 col-form-label text-nowrap"} %>
